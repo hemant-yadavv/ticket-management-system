@@ -10,6 +10,10 @@ const PORT = process.env.PORT || 4000;
 // middleware to parse json request body
 app.use(express.json());
 
+// cors middleware
+const cors = require('cors');
+app.use(cors());
+
 // import routes for TODO API
 const ticketRoute = require('./routes/ticket');
 
